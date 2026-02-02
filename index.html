@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ЮгСтройСегмент — производство и доставка сыпучих материалов в Сочи. Щебень, песок, отсев, керамзит, чернозём. Собственное производство плодородного грунта и почвосмеси. Озеленение и благоустройство.">
+    <meta name="keywords" content="щебень Сочи, песок Сочи, доставка инертных материалов, чернозём, почвосмесь, озеленение Сочи, благоустройство, отсев, керамзит, ГПС, галька, габионный камень">
+    <title>ЮгСтройСегмент — Производство и доставка сыпучих материалов в Сочи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">
+                <img src="https://yugstroysegment.com/wp-content/uploads/2021/05/logo-main-re.png" alt="ЮгСтройСегмент" class="header__logo-img">
+            </a>
+            <nav class="header__nav" id="nav">
+                <a href="#products" class="nav__link">Товары</a>
+                <a href="#production" class="nav__link">Производство</a>
+                <a href="#services" class="nav__link">Услуги</a>
+                <a href="#gallery" class="nav__link">Галерея</a>
+                <a href="#reviews" class="nav__link">Отзывы</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <div class="header__contacts">
+                <a href="tel:+79654811610" class="header__phone">+7 965 481-16-10</a>
+                <div class="header__messengers">
+                    <a href="https://wa.me/79654811610" target="_blank" rel="noopener" class="messenger-icon messenger-icon--wa" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </a>
+                    <a href="https://t.me/yugstroysegment" target="_blank" rel="noopener" class="messenger-icon messenger-icon--tg" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <button class="header__burger" id="burger" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero__inner">
+            <h1 class="hero__title">Производство и доставка<br>сыпучих материалов в <span class="highlight">Сочи</span></h1>
+            <p class="hero__subtitle">Оперативная доставка в течение 2 часов. Собственное производство плодородного грунта и почвосмеси — <strong class="highlight">единственные в городе</strong>. Гарантия лучшей цены.</p>
+            <div class="hero__buttons">
+                <a href="tel:+79654811610" class="btn btn--primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Позвонить
+                </a>
+                <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D1%8B." target="_blank" rel="noopener" class="btn btn--whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Написать в WhatsApp
+                </a>
+                <a href="https://www.avito.ru/user/7773c42130274d512b81e7b8ccc0af90/profile" target="_blank" rel="noopener" class="btn btn--avito">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><circle cx="5.5" cy="12" r="3.5" fill="#97CF26"/><circle cx="12" cy="7" r="4" fill="#00AAFF"/><circle cx="18.5" cy="12" r="3.5" fill="#FF6163"/><circle cx="12" cy="17" r="3" fill="#AB47BC"/></svg>
+                    Смотреть на Авито
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMOS -->
+    <section class="promos" id="promos">
+        <div class="container">
+            <div class="promos__grid">
+                <div class="promo-card promo-card--accent">
+                    <div class="promo-card__badge">до 15%</div>
+                    <h3 class="promo-card__title">Грунт + озеленение</h3>
+                    <p class="promo-card__text">Закажите плодородный грунт и услугу озеленения вместе — получите скидку <strong>до 15%</strong> на весь комплекс работ</p>
+                    <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B3%D1%80%D1%83%D0%BD%D1%82%20%2B%20%D0%BE%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5." target="_blank" rel="noopener" class="btn btn--whatsapp">Узнать подробнее</a>
+                </div>
+                <div class="promo-card promo-card--dark">
+                    <div class="promo-card__badge">до 5%</div>
+                    <h3 class="promo-card__title">Первый заказ со скидкой</h3>
+                    <p class="promo-card__text">Для новых клиентов — <strong>скидка до 5%</strong> на первый заказ любых материалов. Просто назовите промокод <strong>НОВЫЙ5</strong></p>
+                    <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9F%D1%80%D0%BE%D0%BC%D0%BE%D0%BA%D0%BE%D0%B4%20%D0%9D%D0%9E%D0%92%D0%AB%D0%995." target="_blank" rel="noopener" class="btn btn--primary">Заказать со скидкой</a>
+                </div>
+                <div class="promo-card promo-card--volume">
+                    <div class="promo-card__badge">до 10%</div>
+                    <h3 class="promo-card__title">Скидка на объём</h3>
+                    <p class="promo-card__text">При заказе <strong>от 100 м³</strong> любых материалов — скидка <strong>до 10%</strong> на весь объём. Выгодно для крупных объектов</p>
+                    <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%BE%D0%B1%D1%8A%D1%91%D0%BC%20%D0%BE%D1%82%20100%20%D0%BC%C2%B3." target="_blank" rel="noopener" class="btn btn--whatsapp">Рассчитать заказ</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Наши материалы</h2>
+            <p class="section-subtitle">Доставка по всему Сочи</p>
+            <div class="products__grid">
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/Щебень-1-rotated-qkvo9yqoq3bunm02tbbv3ti6xqb6ownc7w4kkrvsu0.jpg" alt="Щебень" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Щебень</h3>
+                        <p class="product-card__desc">Гранитный, гравийный. Фракции 5-20, 20-40, 40-70 мм</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%89%D0%B5%D0%B1%D0%B5%D0%BD%D1%8C." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/Песок-qkvo9yqoq3bunm02tbbv3ti6xqb6ownc7w4kkrvsu0.jpg" alt="Песок" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Песок</h3>
+                        <p class="product-card__desc">Речной, морской, строительный. Для любых работ</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D0%B5%D1%81%D0%BE%D0%BA." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/Отсев-1-rotated-qkvo9zoiwxd4z7ypntqhob9nj46jwlr2k0s221uens.jpg" alt="Отсев" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Отсев</h3>
+                        <p class="product-card__desc">Гранитный отсев для дорожек, площадок и подсыпки</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BE%D1%82%D1%81%D0%B5%D0%B2." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://keramzit-serpuhov.ru/upload/iblock/a22/qnwgf3xv0hsd1bjzfwr6yw2lxmxf8fbv/keramzit-rossypyu-frakciya-10-20.jpg" alt="Керамзит" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Керамзит</h3>
+                        <p class="product-card__desc">Лёгкий утеплитель для стяжки, фундамента и кровли</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%B5%D1%80%D0%B0%D0%BC%D0%B7%D0%B8%D1%82." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/photo1713997734-5-qn7ahtde3oqwndnhoex482il9gytsmi5qycvbfsgqg.jpeg" alt="Габионный камень" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Габионный камень</h3>
+                        <p class="product-card__desc">Крупный камень для габионных конструкций и подпорных стен</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B3%D0%B0%D0%B1%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%B0%D0%BC%D0%B5%D0%BD%D1%8C." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/zemlya-2jpg-qkvo9yqoq3bunm02tbbv3ti6xqb6ownc7w4kkrvsu0.jpg" alt="Чернозём" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Чернозём</h3>
+                        <p class="product-card__desc">Плодородный грунт собственного производства для озеленения</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B7%D1%91%D0%BC." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/2024/04/photo1713997734.jpeg" alt="Почвосмесь" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Почвосмесь</h3>
+                        <p class="product-card__desc">Готовая смесь собственного производства для посадки и газонов</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D0%BE%D1%87%D0%B2%D0%BE%D1%81%D0%BC%D0%B5%D1%81%D1%8C." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/ПГС-qkvo9zoiwxd4z7ypntqhob9nj46jwlr2k0s221uens.jpg" alt="ГПС" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">ГПС</h3>
+                        <p class="product-card__desc">Гравийно-песчаная смесь для дорог и фундаментов</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%93%D0%9F%D0%A1." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-card__img">
+                        <img src="images/Галька.jpg" alt="Галька" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__title">Галька</h3>
+                        <p class="product-card__desc">Речная и морская галька для ландшафтного дизайна</p>
+                        <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B3%D0%B0%D0%BB%D1%8C%D0%BA%D0%B0." target="_blank" rel="noopener" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTION (ВЫДЕЛЕННЫЙ БЛОК) -->
+    <section class="production" id="production">
+        <div class="container production__inner">
+            <div class="production__content">
+                <h2 class="production__title">Собственное производство<br>с 12-летним стажем</h2>
+                <p class="production__text">Мы — <strong>единственные производители</strong> плодородного грунта и почвосмеси на весь город Сочи. Сопровождаем все объекты по озеленению, курируем процесс и несём полную ответственность за качество нашего продукта.</p>
+                <div class="production__stats">
+                    <div class="stat">
+                        <span class="stat__number">12</span>
+                        <span class="stat__label">лет опыта<br>производства</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">№1</span>
+                        <span class="stat__label">единственные<br>в Сочи</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__number">100%</span>
+                        <span class="stat__label">сопровождение<br>объектов</span>
+                    </div>
+                </div>
+                <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D0%BB%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9%20%D0%B3%D1%80%D1%83%D0%BD%D1%82." target="_blank" rel="noopener" class="btn btn--light">Узнать подробнее</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Услуги</h2>
+            <p class="section-subtitle">Полный цикл работ с гарантией результата</p>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__img">
+                        <img src="images/Озеленение.jpeg" alt="Озеленение территорий" loading="lazy">
+                    </div>
+                    <h3 class="service-card__title">Озеленение территорий</h3>
+                    <p class="service-card__desc">Посадка деревьев, кустарников, устройство газонов. Используем грунт и почвосмесь собственного производства.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-card__img">
+                        <img src="https://yugstroysegment.com/wp-content/uploads/elementor/thumbs/vyvoz-grunta-qkvo9uzbyr6pd65jf9pctugck6tpu48evdimno1diw.jpg" alt="Вывоз грунта" loading="lazy">
+                    </div>
+                    <h3 class="service-card__title">Вывоз грунта и строительного боя</h3>
+                    <p class="service-card__desc">Оперативный вывоз грунта, строительного мусора и боя. Разработка котлованов.</p>
+                </div>
+            </div>
+            <div class="services__cta">
+                <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8." target="_blank" rel="noopener" class="btn btn--primary">Обсудить проект</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Наши выгрузки</h2>
+            <p class="section-subtitle">Реальные фото доставок и объектов</p>
+            <div class="gallery__grid">
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-15.jpg" alt="Выгрузка щебня на фоне гор Сочи" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-08.jpg" alt="Доставка чернозёма к дому" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-00.jpg" alt="Выгрузка гальки на объекте" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-18-42.jpg" alt="Щебень на производственной базе" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-21-17.jpg" alt="Доставка плодородного грунта" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-34.jpg" alt="Выгрузка щебня на строительной площадке" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-28.jpg" alt="Доставка щебня к жилому комплексу" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-31.jpg" alt="Выгрузка отсева в горах" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-21-15.jpg" alt="Работа самосвала и экскаватора" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-19-11.jpg" alt="Спецтехника на горном объекте" loading="lazy">
+                </div>
+                <div class="gallery__item">
+                    <img src="images/выгрузки/photo_2026-02-01_10-18-56.jpg" alt="Щебень в биг-бэге" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO GALLERY -->
+    <section class="video-gallery" id="video-gallery">
+        <div class="container">
+            <h2 class="section-title">Видео с объектов</h2>
+            <p class="section-subtitle">Смотрите, как проходят доставки и выгрузки</p>
+            <div class="video-gallery__grid">
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video1.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video2.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video3.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video4.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video5.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video6.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video7.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video8.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+                <div class="video-gallery__item">
+                    <video src="images/выгрузки/web/video9.mp4" preload="metadata" muted playsinline></video>
+                    <div class="video-gallery__play">
+                        <svg viewBox="0 0 48 48" fill="currentColor"><path d="M16 10v28l22-14z"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="advantages__grid">
+                <div class="advantage">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 36h32M12 36V20l12-8 12 8v16"/><rect x="18" y="24" width="12" height="12"/></svg>
+                    </div>
+                    <h3 class="advantage__title">Своё производство</h3>
+                    <p class="advantage__text">Единственные производители плодородного грунта и почвосмеси в Сочи</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 8"/></svg>
+                    </div>
+                    <h3 class="advantage__title">Доставка от 2 часов</h3>
+                    <p class="advantage__text">Оперативная обработка заявок и доставка в кратчайшие сроки</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 32h12l4-4h8l4 4h12"/><rect x="8" y="32" width="32" height="8" rx="2"/><circle cx="16" cy="36" r="2"/><circle cx="32" cy="36" r="2"/><path d="M12 32V24l4-8h16l4 8v8"/></svg>
+                    </div>
+                    <h3 class="advantage__title">Доставка по всему Сочи</h3>
+                    <p class="advantage__text">Собственный транспорт. Доставим в любой район большого Сочи</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 36l6-12 6 8 6-16 6 20"/><path d="M8 40h32"/><circle cx="24" cy="12" r="4"/></svg>
+                    </div>
+                    <h3 class="advantage__title">Лучшая цена</h3>
+                    <p class="advantage__text">Гарантия лучшей цены по городу. Индивидуальный подход к каждому клиенту</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 36h8l2-4h16l2 4h8"/><rect x="10" y="20" width="28" height="16" rx="2"/><path d="M14 20v-4a2 2 0 012-2h16a2 2 0 012 2v4"/><circle cx="18" cy="32" r="3"/><circle cx="30" cy="32" r="3"/></svg>
+                    </div>
+                    <h3 class="advantage__title">Собственный автопарк</h3>
+                    <p class="advantage__text">46 единиц спецтехники для оперативной доставки любых объёмов</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="18" r="8"/><path d="M12 40c0-6.627 5.373-12 12-12s12 5.373 12 12"/><path d="M20 18l3 3 5-6"/></svg>
+                    </div>
+                    <h3 class="advantage__title">Бесплатная консультация</h3>
+                    <p class="advantage__text">Для снижения стоимости и подбора материала — консультация специалиста бесплатно</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="reviews__carousel" id="reviewsCarousel">
+                <div class="reviews__track" id="reviewsTrack">
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Неделю не могла найти щебень. Рынок в Сочи сходит с ума. Купили в данной организации, ребята молодцы — привезли в тот же день!»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/2929022682.jpg" alt="Наталья" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Наталья</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Оперативно организовали работы по планировке участка, нарезали дорогу и отсыпали хорошим материалом.»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/HrYELiFv0u8-min.jpg" alt="Владислав" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Владислав</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Перепутали доставку — кубы, тонны. Оказалось, что привезли ещё больше, чем надо было. Очень довольны, спасибо!»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/1dc4c066d7040e27207f414d78944d26.jpg" alt="Иван" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Иван</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Приобрели для благоустройства землю планировочную и плодородную. Земля чёрная, рыхлая, как обещали — будем работать, спасибо за скидку!»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/2928748326.jpg" alt="Марина" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Марина</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Щебень оказался не тем, что я представлял, но организация пошла навстречу и с колоссальной скидкой привезли нужный материал.»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/ba5b359953368d68470fcbde35e1.jpg" alt="Дмитрий" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Дмитрий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Приятно иметь дело — вежливые и компетентные специалисты.»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/eSJEU5g.jpg" alt="Анатолий" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Анатолий</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">«Работаю озеленителем, в течении 4 лет перебивалась грязью. Знала бы, что есть такая замечательная земля — сэкономила бы нервы и средства ещё на 10 лет вперёд. Дай бог вам процветания!»</p>
+                        <div class="review-card__author">
+                            <img src="https://yugstroysegment.com/wp-content/uploads/2021/06/annette-frier-TPd8CLUNmSc-qixVL9ZWAR5.300x168.jpg" alt="Аннет" class="review-card__avatar-img">
+                            <div>
+                                <div class="review-card__name">Аннет</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__controls">
+                    <button class="reviews__btn reviews__btn--prev" id="prevReview" aria-label="Предыдущий отзыв">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="reviews__btn reviews__btn--next" id="nextReview" aria-label="Следующий отзыв">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <img src="https://yugstroysegment.com/wp-content/uploads/2021/05/logo-main-re.png" alt="ЮгСтройСегмент" class="footer__logo-img">
+                </div>
+                <p class="footer__desc">Доставка инертных материалов и услуги по озеленению в Сочи. Собственное производство плодородного грунта и почвосмеси.</p>
+            </div>
+            <div class="footer__contacts">
+                <h3 class="footer__heading">Контакты</h3>
+                <a href="tel:+79654811610" class="footer__phone">+7 965 481-16-10</a>
+                <p class="footer__email">stroy.segment123@mail.ru</p>
+                <p class="footer__address">Авиационная ул., 3В, Адлер, Сочи</p>
+                <p class="footer__hours">Пн-Вс 09:00 — 17:00</p>
+                <div class="footer__messengers">
+                    <a href="https://wa.me/79654811610" target="_blank" rel="noopener" class="footer__messenger">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="https://t.me/yugstroysegment" target="_blank" rel="noopener" class="footer__messenger">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        Telegram
+                    </a>
+                    <a href="https://www.avito.ru/user/7773c42130274d512b81e7b8ccc0af90/profile" target="_blank" rel="noopener" class="footer__messenger">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none"><circle cx="5.5" cy="12" r="3.5" fill="#97CF26"/><circle cx="12" cy="7" r="4" fill="#00AAFF"/><circle cx="18.5" cy="12" r="3.5" fill="#FF6163"/><circle cx="12" cy="17" r="3" fill="#AB47BC"/></svg>
+                        Авито
+                    </a>
+                </div>
+            </div>
+            <div class="footer__nav">
+                <h3 class="footer__heading">Навигация</h3>
+                <a href="#products" class="footer__link">Товары</a>
+                <a href="#production" class="footer__link">Производство</a>
+                <a href="#services" class="footer__link">Услуги</a>
+                <a href="#gallery" class="footer__link">Галерея</a>
+                <a href="#reviews" class="footer__link">Отзывы</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 ЮгСтройСегмент. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/79654811610?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!" target="_blank" rel="noopener" class="floating-wa" aria-label="Написать в WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightboxClose" aria-label="Закрыть">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Предыдущее">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Следующее">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="lightbox__content" id="lightboxContent"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
