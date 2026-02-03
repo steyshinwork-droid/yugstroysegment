@@ -481,6 +481,13 @@ ul, ol {
     color: var(--color-text);
 }
 
+.product-card__price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
 .product-card__desc {
     font-size: 0.9rem;
     color: var(--color-text-light);
