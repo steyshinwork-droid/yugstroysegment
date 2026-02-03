@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /images/Скриншоты/
+
+Sitemap: http://yugstroysegment.com/sitemap.xml
+
+Host: yugstroysegment.com
