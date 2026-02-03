@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /images/Скриншоты/
 
-Sitemap: http://yugstroysegment.com/sitemap.xml
+# Главное зеркало сайта для Яндекса
+Host: https://yugstroysegment.com
 
-Host: yugstroysegment.com
+Sitemap: https://yugstroysegment.com/sitemap.xml
