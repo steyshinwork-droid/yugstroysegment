@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var galleryImages = [];
     var currentLightboxIndex = 0;
 
-    // Collect gallery images
+    // Collect gallery images (main page)
     var galleryItems = document.querySelectorAll('.gallery__item');
     galleryItems.forEach(function (item, index) {
         var img = item.querySelector('img');
@@ -157,6 +157,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         item.addEventListener('click', function () {
             currentLightboxIndex = index;
+            openLightbox(img.src, 'image');
+        });
+    });
+
+    // Collect product gallery images (product pages)
+    var productGalleryItems = document.querySelectorAll('.product-gallery__item');
+    productGalleryItems.forEach(function (item, index) {
+        var img = item.querySelector('img');
+        galleryImages.push(img.src);
+
+        item.addEventListener('click', function () {
+            currentLightboxIndex = galleryItems.length + index;
             openLightbox(img.src, 'image');
         });
     });
@@ -211,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ===== SCROLL ANIMATIONS =====
     var fadeElements = document.querySelectorAll(
-        '.product-card, .service-card, .advantage, .review-card, .production__content, .section-title, .gallery__item, .video-gallery__item, .promo-card'
+        '.product-card, .service-card, .advantage, .review-card, .production__content, .section-title, .gallery__item, .video-gallery__item, .promo-card, .product-gallery__item'
     );
 
     fadeElements.forEach(function (el) {
@@ -233,6 +245,45 @@ document.addEventListener('DOMContentLoaded', function () {
     fadeElements.forEach(function (el) {
         observer.observe(el);
     });
+
+    // ===== FAQ ACCORDION =====
+    var faqItems = document.querySelectorAll('.faq__item');
+
+    faqItems.forEach(function (item) {
+        var question = item.querySelector('.faq__question');
+        question.addEventListener('click', function () {
+            var isActive = item.classList.contains('active');
+            faqItems.forEach(function (i) { i.classList.remove('active'); });
+            if (!isActive) item.classList.add('active');
+        });
+    });
+
+    // ===== ORDER FORM =====
+    var orderForm = document.getElementById('orderForm');
+
+    if (orderForm) {
+        orderForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var name = document.getElementById('orderName').value.trim();
+            var phone = document.getElementById('orderPhone').value.trim();
+            var material = document.getElementById('orderMaterial').value;
+            var volume = document.getElementById('orderVolume').value.trim();
+            var comment = document.getElementById('orderComment').value.trim();
+
+            var message = 'Заявка с сайта:\n';
+            message += 'Имя: ' + name + '\n';
+            message += 'Телефон: ' + phone + '\n';
+            if (material) message += 'Материал: ' + material + '\n';
+            if (volume) message += 'Объём: ' + volume + '\n';
+            if (comment) message += 'Комментарий: ' + comment;
+
+            var waUrl = 'https://wa.me/79654811610?text=' + encodeURIComponent(message);
+            window.open(waUrl, '_blank');
+
+            orderForm.innerHTML = '<div class="order-form__success"><h3>Спасибо за заявку!</h3><p>Мы перенаправили вас в WhatsApp для подтверждения заказа.</p></div>';
+        });
+    }
 
     // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
