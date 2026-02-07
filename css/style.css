@@ -1068,14 +1068,14 @@ ul, ol {
     color: rgba(255, 255, 255, 0.4);
 }
 
-/* ===== FLOATING WHATSAPP ===== */
-.floating-wa {
+/* ===== FLOATING TELEGRAM ===== */
+.floating-tg {
     position: fixed;
     bottom: 24px;
     right: 24px;
     width: 60px;
     height: 60px;
-    background: var(--color-whatsapp);
+    background: var(--color-telegram);
     border-radius: var(--radius-full);
     display: flex;
     align-items: center;
@@ -1084,14 +1084,14 @@ ul, ol {
     box-shadow: var(--shadow-lg);
     z-index: 999;
     transition: var(--transition);
-    /* no pulse animation — clean business look */
 }
 
-.floating-wa:hover {
-    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+.floating-tg:hover {
+    box-shadow: 0 4px 16px rgba(0, 136, 204, 0.4);
+    transform: scale(1.05);
 }
 
-.floating-wa svg {
+.floating-tg svg {
     width: 32px;
     height: 32px;
 }
@@ -1770,14 +1770,14 @@ ul, ol {
         gap: 32px;
     }
 
-    .floating-wa {
+    .floating-tg {
         width: 52px;
         height: 52px;
         bottom: 16px;
         right: 16px;
     }
 
-    .floating-wa svg {
+    .floating-tg svg {
         width: 28px;
         height: 28px;
     }
