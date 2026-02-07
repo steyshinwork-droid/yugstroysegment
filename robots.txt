@@ -1,6 +1,16 @@
 User-agent: *
 Allow: /
 Disallow: /images/Скриншоты/
+Disallow: /wp-content/
+Disallow: /wp-json/
+Disallow: /feed/
+Disallow: /tovary/
+Disallow: /contact/
+Disallow: /about/
+Disallow: /elementor-hf/
+Disallow: /all-courses/
+Disallow: /jcomments/
+Disallow: /category/
 
 # Главное зеркало сайта для Яндекса
 Host: https://yugstroysegment.com
