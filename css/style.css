@@ -967,6 +967,31 @@ ul, ol {
     border-radius: var(--radius-sm);
 }
 
+/* ===== SEO TEXT ===== */
+.seo-text {
+    padding: 40px 0;
+    background: var(--color-light);
+}
+.seo-text h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    margin-bottom: 12px;
+}
+.seo-text p {
+    font-size: 0.9rem;
+    color: var(--color-text-light, #666);
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+.seo-text a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+.seo-text a:hover {
+    text-decoration: underline;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: var(--color-dark);
