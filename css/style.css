@@ -1094,7 +1094,8 @@ ul, ol {
 }
 
 /* ===== FLOATING TELEGRAM ===== */
-.floating-tg {
+.floating-tg,
+.floating-cta {
     position: fixed;
     bottom: 24px;
     right: 24px;
@@ -1111,12 +1112,14 @@ ul, ol {
     transition: var(--transition);
 }
 
-.floating-tg:hover {
+.floating-tg:hover,
+.floating-cta:hover {
     box-shadow: 0 4px 16px rgba(0, 136, 204, 0.4);
     transform: scale(1.05);
 }
 
-.floating-tg svg {
+.floating-tg svg,
+.floating-cta svg {
     width: 32px;
     height: 32px;
 }
@@ -1795,14 +1798,16 @@ ul, ol {
         gap: 32px;
     }
 
-    .floating-tg {
+    .floating-tg,
+    .floating-cta {
         width: 52px;
         height: 52px;
         bottom: 16px;
         right: 16px;
     }
 
-    .floating-tg svg {
+    .floating-tg svg,
+    .floating-cta svg {
         width: 28px;
         height: 28px;
     }
