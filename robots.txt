@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /images/Скриншоты/
 
 # Главное зеркало сайта для Яндекса
 Host: https://yugstroysegment.com
