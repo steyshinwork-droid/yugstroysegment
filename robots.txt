@@ -2,6 +2,6 @@ User-agent: *
 Allow: /
 
 # Главное зеркало сайта для Яндекса
-Host: https://yugstroysegment.com
+Host: yugstroysegment.com
 
 Sitemap: https://yugstroysegment.com/sitemap.xml
