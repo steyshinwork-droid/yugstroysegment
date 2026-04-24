@@ -235,12 +235,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://yugstroysegment.com/articles/chernozem-vs-pochvosmes.html</loc>
-        <lastmod>2026-04-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://yugstroysegment.com/articles/graviy-dlya-dorozhek.html</loc>
         <lastmod>2026-04-15</lastmod>
         <changefreq>monthly</changefreq>
@@ -261,6 +255,12 @@
     <url>
         <loc>https://yugstroysegment.com/articles/pesok-dlya-fundamenta.html</loc>
         <lastmod>2026-04-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://yugstroysegment.com/articles/pochvosmes-dlya-gazona.html</loc>
+        <lastmod>2026-04-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
