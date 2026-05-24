@@ -281,11 +281,31 @@ document.addEventListener('DOMContentLoaded', function () {
             if (comment) message += 'Комментарий: ' + comment;
 
             var waUrl = 'https://wa.me/79654811610?text=' + encodeURIComponent(message);
+            if (typeof ym !== 'undefined') ym(109252827, 'reachGoal', 'whatsapp_click');
             window.open(waUrl, '_blank');
 
             orderForm.innerHTML = '<div class="order-form__success"><h3>Спасибо за заявку!</h3><p>Мы перенаправили вас в WhatsApp для подтверждения заказа.</p></div>';
         });
     }
+
+    // ===== YANDEX METRIKA GOALS =====
+    document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (typeof ym !== 'undefined') ym(109252827, 'reachGoal', 'phone_click');
+        });
+    });
+
+    document.querySelectorAll('a[href*="t.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (typeof ym !== 'undefined') ym(109252827, 'reachGoal', 'telegram_click');
+        });
+    });
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function (link) {
+        link.addEventListener('click', function () {
+            if (typeof ym !== 'undefined') ym(109252827, 'reachGoal', 'whatsapp_click');
+        });
+    });
 
     // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
