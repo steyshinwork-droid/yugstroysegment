@@ -153,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var galleryItems = document.querySelectorAll('.gallery__item');
     galleryItems.forEach(function (item, index) {
         var img = item.querySelector('img');
-        galleryImages.push({ src: img.src, alt: img.alt });
+        var source = item.querySelector('source[type="image/webp"]');
+        galleryImages.push({ src: source ? source.srcset : img.src, alt: img.alt });
 
         item.addEventListener('click', function () {
             currentLightboxIndex = index;
