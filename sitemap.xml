@@ -534,4 +534,22 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://yugstroysegment.com/articles/kakoy-kamen-dlya-gabionov.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://yugstroysegment.com/articles/gabiony-dlya-zabora.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://yugstroysegment.com/articles/chem-zamenit-granit-v-sochi.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
