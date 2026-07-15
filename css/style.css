@@ -2164,6 +2164,36 @@ ul, ol {
     font-size: 0.88rem;
 }
 
+.article-page__related-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #dce8f5;
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-page__related-item:last-child {
+    border-bottom: none;
+}
+
+.article-page__related-item:hover .article-page__related-name {
+    color: #e85d04;
+}
+
+.article-page__related-name {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.article-page__related-price {
+    color: #777;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
 .article-page__cta {
     background: #f4f6f8;
     border-radius: 12px;
