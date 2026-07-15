@@ -1990,6 +1990,31 @@ ul, ol {
     text-decoration: none;
 }
 
+.article-page__table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.95rem;
+}
+
+.article-page__table th,
+.article-page__table td {
+    padding: 10px 14px;
+    border: 1px solid #dce8f5;
+    text-align: left;
+    white-space: normal;
+}
+
+.article-page__table th {
+    background: #f4f6f8;
+    color: #1a1a1a;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
 .article-page__tip {
     background: #fff8f0;
     border-left: 4px solid #e85d04;
@@ -2033,5 +2058,15 @@ ul, ol {
 
     .article-page__cta {
         padding: 20px 16px;
+    }
+
+    .article-page__table {
+        font-size: 0.85rem;
+    }
+
+    .article-page__table th,
+    .article-page__table td {
+        padding: 8px 10px;
+        white-space: nowrap;
     }
 }
