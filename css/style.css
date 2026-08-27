@@ -1192,6 +1192,55 @@ ul, ol {
     transition: var(--transition);
 }
 
+/* Плавающая кнопка звонка — только на мобильных, где нет номера в шапке.
+   Садится над телеграм-кнопкой. */
+.floating-call {
+    display: none;
+    position: fixed;
+    bottom: 96px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+    transition: var(--transition);
+}
+
+.floating-call svg {
+    width: 30px;
+    height: 30px;
+}
+
+.floating-call:hover {
+    color: var(--color-white);
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .floating-call {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-call {
+        width: 52px;
+        height: 52px;
+        bottom: 80px;
+        right: 16px;
+    }
+
+    .floating-call svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
 .floating-tg:hover,
 .floating-cta:hover {
     box-shadow: 0 4px 16px rgba(0, 136, 204, 0.4);
@@ -1237,6 +1286,19 @@ ul, ol {
 
 .floating-cta__btn--tg {
     background: var(--color-telegram);
+}
+
+/* Кнопка звонка в плавающей группе — показываем там,
+   где номер в шапке скрыт (мобильные и планшеты) */
+.floating-cta__btn--call {
+    background: var(--color-primary);
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .floating-cta__btn--call {
+        display: flex;
+    }
 }
 
 .floating-cta__btn--wa {
@@ -1683,7 +1745,16 @@ ul, ol {
         display: flex;
     }
 
+    /* Телефон остаётся виден на мобильных — это главная кнопка заказа.
+       Скрываем только иконки мессенджеров, чтобы шапка не разъезжалась. */
     .header__contacts {
+        display: flex;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: 12px;
+    }
+
+    .header__messengers {
         display: none;
     }
 }
@@ -1967,6 +2038,30 @@ ul, ol {
 }
 
 @media (max-width: 480px) {
+    /* На узком экране номер превращается в заметную кнопку,
+       а логотип ужимается, чтобы шапка не переносилась в две строки */
+    .header__logo-img {
+        height: 34px;
+    }
+
+    .header__contacts {
+        margin-right: 8px;
+    }
+
+    .header__phone {
+        display: inline-block;
+        background: var(--color-primary, #1a73e8);
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .header__phone:hover {
+        color: #fff;
+    }
+
     .hero__title {
         font-size: 1.6rem;
     }
