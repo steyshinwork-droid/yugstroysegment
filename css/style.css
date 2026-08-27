@@ -2040,12 +2040,17 @@ ul, ol {
 @media (max-width: 480px) {
     /* На узком экране номер превращается в заметную кнопку,
        а логотип ужимается, чтобы шапка не переносилась в две строки */
+    .header__inner {
+        gap: 10px;
+    }
+
     .header__logo-img {
         height: 34px;
     }
 
     .header__contacts {
         margin-right: 8px;
+        min-width: 0;
     }
 
     .header__phone {
