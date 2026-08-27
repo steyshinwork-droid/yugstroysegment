@@ -2339,3 +2339,253 @@ ul, ol {
         white-space: nowrap;
     }
 }
+
+/* ===== КАЛЬКУЛЯТОРЫ ===== */
+.calc {
+    background: #fff;
+    border: 1px solid #dce8f5;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 28px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.calc__head {
+    margin-bottom: 18px;
+}
+
+.calc__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+}
+
+.calc__sub {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.calc__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.calc__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.calc__field > span {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #444;
+}
+
+.calc__field input,
+.calc__field select {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #1a1a1a;
+    background: #fff;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+}
+
+.calc__field input:focus,
+.calc__field select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.12);
+}
+
+.calc__field--inline {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.calc__field--inline > span {
+    flex: 1 1 100%;
+}
+
+.calc__field--inline input {
+    flex: 1 1 120px;
+    width: auto;
+}
+
+.calc__field--inline select {
+    flex: 0 0 90px;
+    width: auto;
+}
+
+.calc__check-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.45;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.calc__check-line input {
+    margin-top: 2px;
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    accent-color: var(--color-primary);
+}
+
+.calc__result {
+    border-top: 1px solid #e8eef5;
+    padding-top: 18px;
+}
+
+.calc__main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    margin-bottom: 10px;
+}
+
+.calc__big {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+}
+
+.calc__big b {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.calc__big span {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.calc__price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 6px 0 4px;
+}
+
+.calc__price span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.calc__hint,
+.calc__note {
+    font-size: 0.88rem;
+    color: #666;
+    line-height: 1.55;
+    margin: 8px 0 0;
+}
+
+.calc__note {
+    padding-top: 14px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 16px;
+}
+
+.calc__check {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed #dce8f5;
+}
+
+.calc__verdict {
+    margin-top: 12px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.calc__verdict--ok {
+    background: #eef7ee;
+    border-left: 4px solid #3d8b40;
+    color: #2c4a2e;
+}
+
+.calc__verdict--bad {
+    background: #fff4f4;
+    border-left: 4px solid #d64545;
+    color: #5a2020;
+}
+
+.calc__cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.calc__cta > span {
+    flex: 1 1 100%;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.calc__btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #fff;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.calc__btn:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+
+.calc__btn--call {
+    background: var(--color-primary);
+}
+
+.calc__btn--wa {
+    background: #25d366;
+}
+
+@media (max-width: 600px) {
+    .calc {
+        padding: 18px 16px;
+    }
+
+    .calc__row {
+        grid-template-columns: 1fr;
+    }
+
+    .calc__main {
+        gap: 18px;
+    }
+
+    .calc__big b {
+        font-size: 1.7rem;
+    }
+
+    .calc__btn {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
