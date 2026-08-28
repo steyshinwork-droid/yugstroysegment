@@ -20,7 +20,7 @@
         { id: 'pesok',          name: 'Песок строительный',        density: 1.525 },
         { id: 'galka',          name: 'Галька декоративная',       density: 1.55  },
         { id: 'gps',            name: 'ГПС',                       density: 1.775 },
-        { id: 'chernozem',      name: 'Чернозём',                  density: 1.0   },
+        { id: 'chernozem',      name: 'Чернозём',                  density: 1.1   },
         { id: 'pochvosmes',     name: 'Почвосмесь',                density: 0.85  },
         { id: 'keramzit-10-20', name: 'Керамзит 10–20 мм',         density: 0.375 },
         { id: 'keramzit-20-40', name: 'Керамзит 20–40 мм',         density: 0.315 }
@@ -44,12 +44,12 @@
         'keramzit-20-40': { price: 5900, unit: 'm3', page: 'keramzit.html',   label: 'Керамзит' }
     };
 
-    /* Машины — вместимость по объёму, м³ */
+    /* Машины: ограничены и объёмом кузова, и грузоподъёмностью.
+       Лёгкий материал (чернозём, почвосмесь) упирается в объём,
+       тяжёлый (песок, щебень, ГПС) — в тоннаж, поэтому его входит меньше кубов. */
     var TRUCKS = [
-        { name: 'малый самосвал',  m3: 2,    tons: 3  },
-        { name: 'КамАЗ-5511',      m3: 6.6,  tons: 10 },
-        { name: 'КамАЗ-55111',     m3: 8,    tons: 12 },
-        { name: 'КамАЗ-6520',      m3: 13,   tons: 20 }
+        { name: 'малый самосвал', m3: 2,  tons: 3  },
+        { name: 'самосвал',       m3: 20, tons: 22 }
     ];
 
     var WA_BASE = 'https://wa.me/79654811610?text=';
@@ -84,16 +84,15 @@
         return MATERIALS[0];
     }
 
-    /* Сколько машин и каких — подбираем самую крупную, что имеет смысл */
-    function trucksFor(m3) {
-        for (var i = TRUCKS.length - 1; i >= 0; i--) {
-            var t = TRUCKS[i];
-            if (m3 >= t.m3 * 0.6 || i === 0) {
-                var count = Math.ceil(m3 / t.m3);
-                return { count: count, name: t.name };
-            }
-        }
-        return { count: 1, name: TRUCKS[0].name };
+    /* Сколько машин: считаем и по объёму, и по весу — берём худшее из двух.
+       Например 20 м³ песка весят 30 т, в одну машину не влезут по тоннажу. */
+    function trucksFor(m3, tons) {
+        var small = TRUCKS[0], big = TRUCKS[1];
+        /* Малый самосвал берём только на совсем небольшой заказ —
+           гонять его несколько раз вместо одного рейса большого нет смысла. */
+        var t = (m3 <= small.m3 && tons <= small.tons) ? small : big;
+        var count = Math.max(Math.ceil(m3 / t.m3), Math.ceil(tons / t.tons), 1);
+        return { count: count, name: t.name };
     }
 
     /* ===================== 1. КАЛЬКУЛЯТОР КУЧИ ===================== */
@@ -284,7 +283,7 @@
             var m = material(mat.value), tons = v * m.density;
             var p = PRICES[m.id];
             var cost = p.unit === 't' ? tons * p.price : v * p.price;
-            var tr = trucksFor(v);
+            var tr = trucksFor(v, tons);
 
             var msg = 'Здравствуйте! Нужно ' + fmt(v, 1) + ' м³ (' + p.label.toLowerCase() +
                       '). Площадь ' + fmt(a, 0) + ' м², слой ' + fmt(num(depth.value), 0) + ' см.';
