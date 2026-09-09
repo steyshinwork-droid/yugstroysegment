@@ -13,8 +13,8 @@
     </g>
     <g fill="none" stroke="#1A2332" stroke-width="34">
       <circle cx="82" cy="50" r="40"/>
-      <path d="M222.94 17.23A40 40 0 1 0 222.94 82.77"/>
-      <path d="M324.94 17.23A40 40 0 1 0 324.94 82.77"/>
+      <path d="M228.3 21.73A40 40 0 1 0 228.3 78.27"/>
+      <path d="M330.3 21.73A40 40 0 1 0 330.3 78.27"/>
     </g>
     <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0" stroke-linejoin="miter">
       <path d="M0 0h20v100H0z"/>

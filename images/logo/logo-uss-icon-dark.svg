@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="ЮСС — ЮгСтройСегмент">
   <title>ЮСС</title>
   <rect width="512" height="512" fill="#1A2332"/>
-  <g transform="translate(46.0 120.8) scale(1.2185)">
+  <g transform="translate(46 120.75) scale(1.2185)">
     <path d="M64.35 28 64.35 194 22.35 111Z" fill="#F5C518"/>
     <path d="M64.35 28 106.35 111 64.35 194Z" fill="#F5C518"/>
     <path d="M280.35 28 280.35 194 238.35 111Z" fill="#FFFFFF"/>
@@ -15,8 +15,8 @@
       </g>
       <g fill="none" stroke="#1A2332" stroke-width="34">
         <circle cx="82" cy="50" r="40"/>
-        <path d="M222.94 17.23A40 40 0 1 0 222.94 82.77"/>
-        <path d="M324.94 17.23A40 40 0 1 0 324.94 82.77"/>
+        <path d="M228.3 21.73A40 40 0 1 0 228.3 78.27"/>
+        <path d="M330.3 21.73A40 40 0 1 0 330.3 78.27"/>
       </g>
       <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0" stroke-linejoin="miter">
         <path d="M0 0h20v100H0z"/>
