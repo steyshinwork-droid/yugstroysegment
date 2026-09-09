@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330.7 100" width="330.7" height="100" role="img" aria-label="ЮСС — ЮгСтройСегмент">
+  <title>ЮСС</title>
+  <g fill="#1A2332">
+    <path d="M0 0h20v100H0z"/>
+    <path d="M20 40h22v20H20z"/>
+  </g>
+  <g fill="none" stroke="#1A2332" stroke-width="20">
+    <circle cx="82" cy="50" r="40"/>
+    <path d="M222.94 17.23A40 40 0 1 0 222.94 82.77"/>
+    <path d="M324.94 17.23A40 40 0 1 0 324.94 82.77"/>
+  </g>
+</svg>

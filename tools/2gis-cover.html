@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Обложка ЮСС</title>
+<style>
+  :root{ --dark:#10161F; --yellow:#F5C518; }
+  html,body{ margin:0; padding:0; background:#555; }
+  .canvas{ position:absolute; top:0; left:0; width:1920px; height:1080px; background:var(--dark);
+           display:grid; grid-template-columns:960px 948px; gap:12px; overflow:hidden;
+           font-family:Bahnschrift,"Segoe UI",Arial,sans-serif; }
+  .grid{ display:grid; grid-template-columns:468px 468px; grid-template-rows:534px 534px; gap:12px; }
+
+  /* квадрат 1200x1200: главный кадр сверху, три плитки снизу */
+  body.square .canvas{ width:1200px; height:1200px; grid-template-columns:1200px; grid-template-rows:700px 488px; }
+  body.square .grid{ grid-template-columns:repeat(3,392px); grid-template-rows:488px; }
+  body.square .t4{ display:none; }
+  /* в квадрате главный кадр обрезается сильнее — поднимаем точку кадрирования */
+  body.square .canvas > .cell img{ object-position:50% 22% !important; }
+
+  .cell{ position:relative; overflow:hidden; }
+  .cell img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .tag{ position:absolute; left:0; right:0; bottom:0; padding:16px 22px;
+        background:linear-gradient(transparent, rgba(16,22,31,.88));
+        color:#fff; font-size:26px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+        display:flex; align-items:center; gap:11px; }
+  .tag::before{ content:""; width:13px; height:13px; background:var(--yellow); transform:rotate(45deg); flex:none; }
+
+  .plate{ position:absolute; left:0; right:0; bottom:0; padding:50px 52px 44px;
+          background:linear-gradient(transparent, rgba(16,22,31,.5) 34%, rgba(16,22,31,.93)); }
+  .rule{ width:84px; height:7px; background:var(--yellow); margin-bottom:24px; }
+  .plate img{ height:74px; width:auto; display:block; }
+  .plate .sub{ margin-top:20px; color:#fff; font-size:29px; font-weight:700;
+               letter-spacing:2.6px; text-transform:uppercase; }
+  .plate .sub b{ color:var(--yellow); }
+
+  body.clean .plate, body.clean .tag{ display:none; }
+</style>
+
+<div class="canvas">
+  <div class="cell">
+    <img src="../images/выгрузки/photo_2026-05-25_14-05-06.jpg" style="object-position:50% 42%">
+    <div class="plate">
+      <div class="rule"></div>
+      <img src="../images/logo/logo-uss-mark-white.svg" alt="ЮСС">
+      <div class="sub">Инертные материалы <b>·</b> доставка по Сочи</div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="cell"><img src="../images/выгрузки/photo_2026-05-25_14-04-34.jpg" style="object-position:50% 34%"><div class="tag">Щебень</div></div>
+    <div class="cell"><img src="../images/выгрузки/photo_2026-02-01_10-19-00.jpg"   style="object-position:50% 46%"><div class="tag">Галька</div></div>
+    <div class="cell"><img src="../images/Материалы/Почвасмесь для газона посевного.jpg"  style="object-position:50% 45%"><div class="tag">Почвосмесь</div></div>
+    <div class="cell t4"><img src="../images/выгрузки/photo_2026-05-25_14-04-46.jpg" style="object-position:50% 46%"><div class="tag">Песок</div></div>
+  </div>
+</div>
+
+<script>
+  const v = new URLSearchParams(location.search).get('v');
+  if (v) document.body.className = v;
+</script>
