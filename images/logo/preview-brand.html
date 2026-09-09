@@ -8,47 +8,63 @@
         font-family:"Segoe UI",Arial,sans-serif; }
   .wrap{ max-width:1180px; margin:0 auto; padding:40px 24px 80px; }
   h1{ font-size:26px; margin:0 0 4px; }
-  .lead{ color:#5A5A5A; margin:0 0 36px; }
+  .lead{ color:#5A5A5A; margin:0 0 36px; max-width:760px; }
   h2{ font-size:17px; text-transform:uppercase; letter-spacing:1.5px; color:#5A5A5A;
       margin:44px 0 14px; border-bottom:1px solid #D8D8D8; padding-bottom:8px; }
-  .box{ background:#fff; border:1px solid #D8D8D8; border-radius:8px; padding:28px 32px; margin-bottom:14px; }
+  .box{ background:#fff; border:1px solid #D8D8D8; border-radius:8px;
+        padding:28px 32px; margin-bottom:12px; display:flex; align-items:flex-end;
+        gap:36px; flex-wrap:wrap; }
   .box.dark{ background:#1A2332; border-color:#1A2332; }
-  .box img{ max-width:100%; display:block; }
-  .row{ display:flex; gap:14px; flex-wrap:wrap; align-items:flex-end; }
-  .row img{ border:1px solid #D8D8D8; border-radius:6px; }
-  .cap{ font-size:13px; color:#8A8A8A; margin:8px 0 0; }
+  .box.plain{ display:block; padding:0; overflow:hidden; }
+  img{ max-width:100%; display:block; }
+  .cap{ font-size:13px; color:#8A8A8A; margin:6px 0 0; }
   code{ background:#EFF0EE; padding:2px 6px; border-radius:4px; font-size:13px; }
 </style>
 <div class="wrap">
   <h1>ЮСС — логотип и обложки</h1>
-  <p class="lead">Векторные файлы (SVG) масштабируются без потери качества: хоть на визитку, хоть на борт машины.</p>
+  <p class="lead">Векторные файлы (SVG) масштабируются без потери качества — хоть на визитку,
+  хоть на борт машины. Буквы вычерчены контурами, а не набраны шрифтом: у типографии
+  или у менеджера ничего не «поплывёт».</p>
 
-  <h2>Только буквы</h2>
-  <div class="box"><img src="logo-uss.svg" style="height:88px"></div>
-  <div class="box dark"><img src="logo-uss-white.svg" style="height:88px"></div>
-  <p class="cap"><code>logo-uss.svg</code> — на светлом, <code>logo-uss-white.svg</code> — на тёмном фоне и фото</p>
+  <h2>Основной знак — ЮСС поверх ромбов</h2>
+  <div class="box">
+    <img src="logo-uss.svg" style="height:170px">
+    <img src="logo-uss.svg" style="height:80px">
+    <img src="logo-uss.svg" style="height:44px">
+  </div>
+  <div class="box dark">
+    <img src="logo-uss-white.svg" style="height:170px">
+    <img src="logo-uss-white.svg" style="height:80px">
+  </div>
+  <p class="cap"><code>logo-uss.svg</code> — на светлом, <code>logo-uss-white.svg</code> — на тёмном фоне и на фото.
+  Композиция повторяет действующий логотип: те же ромбы, белые буквы с тёмной обводкой.</p>
 
-  <h2>Со знаком (ромб как в фавиконке сайта)</h2>
-  <div class="box"><img src="logo-uss-mark.svg" style="height:104px"></div>
-  <div class="box dark"><img src="logo-uss-mark-white.svg" style="height:104px"></div>
-  <p class="cap"><code>logo-uss-mark.svg</code> / <code>logo-uss-mark-white.svg</code> — основной вариант для шапок и документов</p>
+  <h2>Один ромб — для тесных мест</h2>
+  <div class="box"><img src="logo-uss-solo.svg" style="height:190px"><img src="logo-uss-solo.svg" style="height:84px"></div>
+  <div class="box dark"><img src="logo-uss-solo-white.svg" style="height:190px"></div>
+  <p class="cap"><code>logo-uss-solo.svg</code> / <code>logo-uss-solo-white.svg</code></p>
 
   <h2>Квадрат для аватарок (2ГИС, Яндекс, мессенджеры)</h2>
-  <div class="row">
-    <img src="logo-uss-icon-dark.svg" width="190">
-    <img src="logo-uss-icon-light.svg" width="190">
-    <img src="logo-uss-icon-dark.svg" width="72">
-    <img src="logo-uss-icon-light.svg" width="72">
-    <img src="logo-uss-icon-dark.svg" width="44">
+  <div class="box">
+    <img src="logo-uss-icon-light.svg" style="width:190px">
+    <img src="logo-uss-icon-dark.svg" style="width:190px">
+    <img src="logo-uss-icon-light.svg" style="width:72px">
+    <img src="logo-uss-icon-dark.svg" style="width:72px">
+    <img src="logo-uss-icon-light.svg" style="width:44px">
   </div>
-  <p class="cap">Справа — как это выглядит мелко в списке организаций. Всё внутри круга: не обрежется круглой аватаркой.</p>
+  <p class="cap">Справа — как знак выглядит мелко в списке организаций. Всё вписано в круг:
+  круглая аватарка ничего не срежет.</p>
+
+  <h2>Только буквы</h2>
+  <div class="box"><img src="logo-uss-letters.svg" style="height:74px"></div>
+  <p class="cap"><code>logo-uss-letters.svg</code> — когда ромбы лишние: штамп, подпись, водяной знак</p>
 
   <h2>Обложка для 2ГИС</h2>
-  <div class="box"><img src="../2gis/2gis-cover-16x9.jpg"></div>
+  <div class="box plain"><img src="../2gis/2gis-cover-16x9.jpg"></div>
   <p class="cap"><code>2gis-cover-16x9.jpg</code> — 1920×1080, основной вариант</p>
-  <div class="box"><img src="../2gis/2gis-cover-1x1.jpg" style="max-width:620px"></div>
+  <div class="box plain" style="max-width:620px"><img src="../2gis/2gis-cover-1x1.jpg"></div>
   <p class="cap"><code>2gis-cover-1x1.jpg</code> — 1200×1200, квадрат</p>
-  <div class="box"><img src="../2gis/2gis-cover-clean.jpg"></div>
+  <div class="box plain"><img src="../2gis/2gis-cover-clean.jpg"></div>
   <p class="cap"><code>2gis-cover-clean.jpg</code> — то же без надписей, если модерация придерётся к тексту на фото</p>
 </div>
 </html>

@@ -1,28 +1,66 @@
 # -*- coding: utf-8 -*-
-"""Генератор логотипа ЮСС. Буквы построены как геометрические контуры,
-шрифт не требуется — файл одинаково откроется в любой программе."""
+"""Генератор логотипа ЮСС.
+
+Композиция повторяет действующий логотип ЮгСтройСегмент: ромбы, а поверх них —
+буквы белым с тёмной обводкой. Буквы построены как геометрические контуры
+(Ю = стойка + перемычка + кольцо, С = дуга), поэтому шрифт для открытия
+файла не нужен.
+
+Запуск:  python gen_logo.py <папка> [<папка2> ...]
+"""
 import os, sys
 
-DARK = "#1A2332"
 YELLOW = "#F5C518"
-WHITE = "#FFFFFF"
+DARK   = "#1A2332"
+WHITE  = "#FFFFFF"
 
-W, H = 330.7, 100          # габарит блока букв
-CX2 = 302                  # центр второй С
+CAP  = 100      # высота буквы
+LW   = 330.7    # ширина блока букв
+CX2  = 302      # центр второй С
+OUT  = 7        # толщина обводки вокруг букв
+W    = LW + 2 * OUT   # 344.7 — ширина с обводкой
 
-def letters(color, indent="  "):
-    """ЮСС: Ю = стойка + перемычка + кольцо, С = дуга с раскрытием 110 град."""
+
+def _shapes(fill, stroke, sw, ind):
+    """Один проход по контурам букв: сначала заливки, потом дуги."""
     return (
-        f'{indent}<g fill="{color}">\n'
-        f'{indent}  <path d="M0 0h20v100H0z"/>\n'
-        f'{indent}  <path d="M20 40h22v20H20z"/>\n'
-        f'{indent}</g>\n'
-        f'{indent}<g fill="none" stroke="{color}" stroke-width="20">\n'
-        f'{indent}  <circle cx="82" cy="50" r="40"/>\n'
-        f'{indent}  <path d="M222.94 17.23A40 40 0 1 0 222.94 82.77"/>\n'
-        f'{indent}  <path d="M{CX2 + 22.94} 17.23A40 40 0 1 0 {CX2 + 22.94} 82.77"/>\n'
-        f'{indent}</g>\n'
+        f'{ind}<g fill="{fill}" stroke="{stroke}" stroke-width="{sw}" stroke-linejoin="miter">\n'
+        f'{ind}  <path d="M0 0h20v100H0z"/>\n'
+        f'{ind}  <path d="M20 40h22v20H20z"/>\n'
+        f'{ind}</g>\n'
+        f'{ind}<g fill="none" stroke="{stroke}" stroke-width="{sw + 20}">\n'
+        f'{ind}  <circle cx="82" cy="50" r="40"/>\n'
+        f'{ind}  <path d="M222.94 17.23A40 40 0 1 0 222.94 82.77"/>\n'
+        f'{ind}  <path d="M{CX2 + 22.94} 17.23A40 40 0 1 0 {CX2 + 22.94} 82.77"/>\n'
+        f'{ind}</g>\n'
     )
+
+
+def letters(y, outline=DARK, body=WHITE, ind="  "):
+    """ЮСС с обводкой: сперва раздутый тёмный контур, сверху белые буквы."""
+    inner = ind + "  "
+    return (
+        f'{ind}<g transform="translate({OUT} {y})">\n'
+        f'{_shapes(outline, outline, 2 * OUT, inner)}'
+        f'{_shapes(body, body, 0, inner)}'
+        f'{ind}</g>\n'
+    )
+
+
+def n(v):
+    """Убирает хвосты вида 22.349999999999994."""
+    v = round(v, 2)
+    return int(v) if v == int(v) else v
+
+
+def rhombus(cx, cy, hw, hh, left, right):
+    """Ромб двумя половинами: левая и правая могут быть разного цвета."""
+    cx, cy, hw, hh = n(cx), n(cy), n(hw), n(hh)
+    return (
+        f'  <path d="M{cx} {n(cy - hh)} {cx} {n(cy + hh)} {n(cx - hw)} {cy}Z" fill="{left}"/>\n'
+        f'  <path d="M{cx} {n(cy - hh)} {n(cx + hw)} {cy} {cx} {n(cy + hh)}Z" fill="{right}"/>\n'
+    )
+
 
 def svg(vw, vh, body):
     return (
@@ -31,37 +69,58 @@ def svg(vw, vh, body):
         f'  <title>ЮСС</title>\n{body}</svg>\n'
     )
 
-def plain(color):
-    return svg(W, H, letters(color))
 
-def mark(color, diamond_right):
-    """Ромб (как в фавиконке) + буквы. Ромб 128x128, отступ до букв 40."""
-    body = (
-        f'  <path d="M64 0 64 128 0 64Z" fill="{YELLOW}"/>\n'
-        f'  <path d="M64 0 128 64 64 128Z" fill="{diamond_right}"/>\n'
-        f'  <g transform="translate(168 14)">\n{letters(color, "    ")}  </g>\n'
+def emblem_body(dark_part):
+    """Три ромба как в действующем логотипе + ЮСС поверх.
+    dark_part — чем рисовать тёмные половины: DARK на светлом фоне, WHITE на тёмном."""
+    cx, cy = W / 2, 111
+    return (
+        rhombus(cx - 108, cy, 42, 83, YELLOW, YELLOW)      # левый жёлтый
+        + rhombus(cx + 108, cy, 42, 83, dark_part, dark_part)  # правый тёмный
+        + rhombus(cx, cy, 84, 111, YELLOW, dark_part)      # центральный жёлто-тёмный
+        + letters(61)
     )
-    return svg(round(168 + W, 1), 128, body)
 
-def icon(bg, color, diamond_right):
-    """Квадрат 512 для аватарок. Всё внутри круга r=256 — переживёт круглую обрезку."""
-    s = 1.2
-    x = round((512 - W * s) / 2, 1)
+
+def solo_body(dark_part):
+    """Один жёлто-тёмный ромб + ЮСС поверх."""
+    cx, cy = W / 2, 145
+    return rhombus(cx, cy, 145, 145, YELLOW, dark_part) + letters(95)
+
+
+def icon(bg, dark_part):
+    """Квадрат 512 для аватарок. Эмблема вписана в круг r=256 — переживёт круглую обрезку."""
+    s = 420 / W
+    x = round((512 - 420) / 2, 1)
+    y = round((512 - 222 * s) / 2, 1)
+    inner = "".join("  " + ln + "\n" for ln in emblem_body(dark_part).splitlines())
     body = (
         f'  <rect width="512" height="512" fill="{bg}"/>\n'
-        f'  <path d="M256 98 256 194 208 146Z" fill="{YELLOW}"/>\n'
-        f'  <path d="M256 98 304 146 256 194Z" fill="{diamond_right}"/>\n'
-        f'  <g transform="translate({x} 245) scale({s})">\n{letters(color, "    ")}  </g>\n'
+        f'  <g transform="translate({x} {y}) scale({round(s, 4)})">\n'
+        f'{inner}'
+        f'  </g>\n'
     )
     return svg(512, 512, body)
 
+
+def plain(color):
+    """Только буквы, без ромбов и обводки."""
+    return svg(LW, CAP, _shapes(color, color, 0, "  "))
+
+
 FILES = {
-    "logo-uss.svg":            plain(DARK),
-    "logo-uss-white.svg":      plain(WHITE),
-    "logo-uss-mark.svg":       mark(DARK, DARK),
-    "logo-uss-mark-white.svg": mark(WHITE, WHITE),
-    "logo-uss-icon-dark.svg":  icon(DARK, WHITE, WHITE),
-    "logo-uss-icon-light.svg": icon(WHITE, DARK, DARK),
+    # основной вариант — буквы поверх ромбов
+    "logo-uss.svg":              svg(W, 222, emblem_body(DARK)),
+    "logo-uss-white.svg":        svg(W, 222, emblem_body(WHITE)),
+    # один ромб, для тесных мест
+    "logo-uss-solo.svg":         svg(W, 290, solo_body(DARK)),
+    "logo-uss-solo-white.svg":   svg(W, 290, solo_body(WHITE)),
+    # квадрат для аватарок
+    "logo-uss-icon-light.svg":   icon(WHITE, DARK),
+    "logo-uss-icon-dark.svg":    icon(DARK, WHITE),
+    # только буквы — для мелких мест и подписей
+    "logo-uss-letters.svg":      plain(DARK),
+    "logo-uss-letters-white.svg": plain(WHITE),
 }
 
 for out_dir in sys.argv[1:]:

@@ -1,12 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.7 222" width="344.7" height="222" role="img" aria-label="ЮСС — ЮгСтройСегмент">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344.7 290" width="344.7" height="290" role="img" aria-label="ЮСС — ЮгСтройСегмент">
   <title>ЮСС</title>
-  <path d="M64.35 28 64.35 194 22.35 111Z" fill="#F5C518"/>
-  <path d="M64.35 28 106.35 111 64.35 194Z" fill="#F5C518"/>
-  <path d="M280.35 28 280.35 194 238.35 111Z" fill="#FFFFFF"/>
-  <path d="M280.35 28 322.35 111 280.35 194Z" fill="#FFFFFF"/>
-  <path d="M172.35 0 172.35 222 88.35 111Z" fill="#F5C518"/>
-  <path d="M172.35 0 256.35 111 172.35 222Z" fill="#FFFFFF"/>
-  <g transform="translate(7 61)">
+  <path d="M172.35 0 172.35 290 27.35 145Z" fill="#F5C518"/>
+  <path d="M172.35 0 317.35 145 172.35 290Z" fill="#1A2332"/>
+  <g transform="translate(7 95)">
     <g fill="#1A2332" stroke="#1A2332" stroke-width="14" stroke-linejoin="miter">
       <path d="M0 0h20v100H0z"/>
       <path d="M20 40h22v20H20z"/>
