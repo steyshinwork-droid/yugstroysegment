@@ -100,6 +100,16 @@ def emblem_body(dark_part):
     )
 
 
+def diamonds_only(dark_part):
+    """Знак без букв — только три ромба. Нужен там, где любые надписи
+    запрещены: модерация 2ГИС считает буквы на фото рекламным текстом."""
+    cx, cy = 150, 111          # холст плотно по ромбам: 300 x 222
+    return svg(300, 222,
+               rhombus(cx - 108, cy, 42, 83, YELLOW, YELLOW)
+               + rhombus(cx + 108, cy, 42, 83, dark_part, dark_part)
+               + rhombus(cx, cy, 84, 111, YELLOW, dark_part))
+
+
 def icon(bg, dark_part):
     """Квадрат 512 для аватарок. Эмблема вписана в круг r=256 — переживёт круглую обрезку."""
     s = 420 / W
@@ -118,6 +128,8 @@ FILES = {
     "logo-uss-white.svg":      svg(W, 222, emblem_body(WHITE)),  # на тёмном фоне и фото
     "logo-uss-icon-light.svg": icon(WHITE, DARK),                # аватарка на белом
     "logo-uss-icon-dark.svg":  icon(DARK, WHITE),                # аватарка на тёмном
+    "logo-uss-diamonds.svg":       diamonds_only(DARK),          # знак без букв, на светлом
+    "logo-uss-diamonds-white.svg": diamonds_only(WHITE),         # знак без букв, на тёмном
 }
 
 for out_dir in sys.argv[1:]:

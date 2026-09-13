@@ -2,21 +2,25 @@
 <meta charset="utf-8">
 <title>Обложка ЮСС</title>
 <style>
-  :root{ --dark:#10161F; --yellow:#F5C518; }
+  :root{ --dark:#10161F; --yellow:#F5C518; --gap:12px; }
   html,body{ margin:0; padding:0; background:#555; }
-  .canvas{ position:absolute; top:0; left:0; width:1920px; height:1080px; background:var(--dark);
-           display:grid; grid-template-columns:960px 948px; gap:12px; overflow:hidden;
-           font-family:Bahnschrift,"Segoe UI",Arial,sans-serif; }
-  .grid{ display:grid; grid-template-columns:468px 468px; grid-template-rows:534px 534px; gap:12px; }
 
-  /* квадрат 1200x1200: главный кадр сверху, три плитки снизу */
-  body.square .canvas{ width:1200px; height:1200px; grid-template-columns:1200px; grid-template-rows:700px 488px; }
-  body.square .grid{ grid-template-columns:repeat(3,392px); grid-template-rows:488px; }
-  body.square .t4{ display:none; }
-  /* в квадрате главный кадр обрезается сильнее — поднимаем точку кадрирования */
-  body.square .canvas > .cell img{ object-position:50% 22% !important; }
+  /* Раскладка на долях (fr), а не на пикселях: можно добавить окантовку
+     по периметру, и сетка пересчитается сама. */
+  .canvas{ position:absolute; top:0; left:0; width:1920px; height:1080px;
+           box-sizing:border-box; background:var(--dark);
+           display:grid; grid-template-columns:minmax(0,960fr) minmax(0,948fr);
+           grid-template-rows:minmax(0,1fr); gap:var(--gap);   /* строку задаём явно:
+           без неё ячейка тянется по натуральной высоте фото и плашка уезжает за край */
+           overflow:hidden; font-family:Bahnschrift,"Segoe UI",Arial,sans-serif; }
+  .grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(2,minmax(0,1fr)); gap:var(--gap); }
 
-  .cell{ position:relative; overflow:hidden; }
+  body.square .canvas{ width:1200px; height:1200px;
+                       grid-template-columns:minmax(0,1fr); grid-template-rows:minmax(0,700fr) minmax(0,488fr); }
+  body.square .grid{ grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:minmax(0,1fr); }
+  body.square .t4{ display:none; }   /* в квадрате три плитки, иначе четвёртая создаёт лишний ряд */
+
+  .cell{ position:relative; overflow:hidden; min-width:0; min-height:0; }
   .cell img{ width:100%; height:100%; object-fit:cover; display:block; }
 
   .tag{ position:absolute; left:0; right:0; bottom:0; padding:16px 22px;
@@ -34,6 +38,21 @@
                letter-spacing:2.6px; text-transform:uppercase; }
   .plate .sub b{ color:var(--yellow); }
 
+  /* без единого слова: ни подписей на плитках, ни строки под знаком,
+     сам знак — только ромбы. Плюс окантовка по периметру. */
+  body.nowords .tag, body.nowords .sub, body.nowords .rule{ display:none; }
+  body.nowords .canvas{ padding:var(--gap); }
+  body.nowords .plate{ padding:46px 48px 40px; }
+  body.nowords .plate img{ height:150px; }
+  body.square.nowords .plate img{ height:118px; }
+  /* Оба знака лежат в разметке и грузятся сразу, переключаются стилями:
+     подмена src скриптом не успевала к моменту съёмки кадра. */
+  .plate img.logo-mark{ display:none; }   /* иначе .plate img перебивает по весу */
+  body.nowords .plate img.logo-full{ display:none; }
+  body.nowords .plate img.logo-mark{ display:block; }
+  /* в квадрате главный кадр обрезается сильнее — поднимаем точку кадрирования */
+  body.square .canvas > .cell > img{ object-position:50% 22% !important; }
+
   body.clean .plate, body.clean .tag{ display:none; }
 </style>
 
@@ -42,7 +61,8 @@
     <img src="../images/выгрузки/photo_2026-05-25_14-05-06.jpg" style="object-position:50% 42%">
     <div class="plate">
       <div class="rule"></div>
-      <img src="../images/logo/logo-uss-white.svg" alt="ЮСС">
+      <img class="logo logo-full" src="../images/logo/logo-uss-white.svg" alt="ЮСС">
+      <img class="logo logo-mark" src="../images/logo/logo-uss-diamonds-white.svg" alt="ЮСС">
       <div class="sub">Инертные материалы <b>·</b> доставка по Сочи</div>
     </div>
   </div>
