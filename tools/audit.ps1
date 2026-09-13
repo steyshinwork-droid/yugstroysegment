@@ -6,7 +6,9 @@ $issues = @()
 # Known-intentional pages: search-engine verification stubs, 404, and the
 # tovary/ + uslugi/ redirect stubs added 3 June (they canonical to the real page on purpose)
 $skip = @('404.html','google92049c5efe7c59b3.html','yandex_e2838f95616f8633.html')
-$isService = { param($r) $r -in $skip -or $r -match '^(tovary|uslugi)[\\/]' }
+# Служебные файлы, не являющиеся страницами сайта: исходник обложки 2ГИС
+# и превью фирменного стиля. Оба помечены noindex и в sitemap не нужны.
+$isService = { param($r) $r -in $skip -or $r -match '^(tovary|uslugi|tools)[\\/]' -or $r -match '^images[\\/]logo[\\/]' }
 
 foreach ($p in $pages) {
     $rel = $p.FullName.Substring($root.Length + 1)
