@@ -667,7 +667,10 @@ ul, ol {
 
 .services__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* Карточки подстраиваются по числу: одна — по центру, две — в ряд.
+       Жёсткие два столбца оставляли дыру, когда услуг стало меньше. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 460px));
+    justify-content: center;
     gap: 32px;
     margin-bottom: 48px;
 }
@@ -1779,7 +1782,7 @@ ul, ol {
     }
 
     .services__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(280px, 460px));
     }
 
     .gallery__grid {
